@@ -1,0 +1,63 @@
+body {
+	margin: 0;
+}
+ 
+table {
+	border: none;
+	border-spacing: 5px;
+	margin: 0 0 35%;
+}
+
+td {
+	height: 25px;
+	width: 73px;
+    background: #9593D9;
+	padding: 0;
+}
+
+#field {
+	background: #494946;
+	height: 976px;
+	width: 805px;
+	margin: auto;
+	border: 10px solid gray;
+	border-bottom: none;
+	border-spacing: 0;
+	cursor: none;
+}
+
+#main_td {
+	background: none;
+	height: 100%;
+	width: 100%;
+}
+
+#ball {
+	width: 25px;
+	height: 25px;
+	background: linear-gradient(to bottom, white 0%, gray 100%);
+	position: absolute;
+	border-radius: 50%;
+	left: 947.5px;
+	top: 926px;
+}
+
+#paddle {
+	height: 25px;
+	width: 148px;
+	background: #9593D9;
+	border-radius: 12.5px;
+	position: absolute;
+	left: 886px;
+	top:951px;
+}
+
+#input {
+	position: absolute;
+	top: 0;
+	left:0;
+}
+
+.hide {
+	visibility: hidden;
+}

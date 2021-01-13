@@ -37,9 +37,10 @@ td {
 	height: 25px;
 	background: linear-gradient(to bottom, white 0%, gray 100%);
 	position: absolute;
-	border-radius: 50%;
+	border-radius: 12.5px;
 	left: 947.5px;
 	top: 926px;
+	cursor: none !important;
 }
 
 #paddle {
@@ -50,9 +51,11 @@ td {
 	position: absolute;
 	left: 886px;
 	top:951px;
+	cursor: none !important;
 }
 
 #input {
+	background: transparent;
 	position: absolute;
 	top: 0;
 	left:0;

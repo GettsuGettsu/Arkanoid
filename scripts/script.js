@@ -7,8 +7,6 @@ const inpt = document.getElementById('input');
 
 let score = 0;
 let lifes = 300;
-let a = bricks[2].getBoundingClientRect();
-alert(a.x+", "+a.y+"\n"+Math.floor(a.x/73)+", "+Math.floor(a.y/25));
 
 let Ball = {
 	x: 947.5,
@@ -17,7 +15,7 @@ let Ball = {
 	height: 25,
 	dx: 0,
 	dy: 0,
-	v: 7
+	v: 5
 }
 let Paddle = {
 	x:886,
@@ -113,20 +111,21 @@ function cycle() {
 			Ball.dx *= -1;
 		}
 	}
-	/*if (collides(Ball, Paddle)) { 
-		Ball.y = Paddle.y - Ball.height; 
-		Ball.dy *= -1;
-	}*/
 	
 	for (let i = 0; i < bricks.length; i++) {
 		let brick = bricks[i].getBoundingClientRect();
 		if (collides(Ball, brick)) {
 			if (bricks[i].className !== 'hide') {
+				score++;
 				if (Ball.y + Ball.height - Ball.v <= brick.y || Ball.y >= brick.y + brick.height - Ball.v) {
 					Ball.dy *= -1;
 				}
 				else Ball.dx *= -1;
 				bricks[i].className = 'hide';
+				if (score === 110) {
+					alert('You win!');
+					location.reload();
+				}
 			}
 			break;
 		}
@@ -142,5 +141,3 @@ function cycle() {
 	inpt.setAttribute('value', "lifes: " + lifes);
 }
 requestAnimationFrame(cycle);
-
-

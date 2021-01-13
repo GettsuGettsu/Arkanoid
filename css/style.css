@@ -24,6 +24,8 @@ td {
 	border-bottom: none;
 	border-spacing: 0;
 	cursor: none;
+	position: absolute;
+	left: 557.5;
 }
 
 #main_td {
@@ -58,7 +60,7 @@ td {
 	background: transparent;
 	position: absolute;
 	top: 0;
-	left:0;
+	left:-556.5;
 }
 
 .hide {

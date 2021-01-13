@@ -6,7 +6,7 @@ const paddle = document.getElementById('paddle');
 const inpt = document.getElementById('input');
 
 let score = 0;
-let lifes = 300;
+let lifes = 3;
 
 let Ball = {
 	x: 947.5,

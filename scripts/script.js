@@ -7,6 +7,8 @@ const inpt = document.getElementById('input');
 
 let score = 0;
 let lifes = 300;
+let a = bricks[2].getBoundingClientRect();
+alert(a.x+", "+a.y+"\n"+Math.floor(a.x/73)+", "+Math.floor(a.y/25));
 
 let Ball = {
 	x: 947.5,
@@ -81,11 +83,12 @@ function cycle() {
 		Ball.y = bord.y;
 		Ball.dy *= -1;
 	}
-	if (Ball.y >= bord.bottom - Ball.width) {
+	if (Ball.y + Ball.height >= bord.bottom) {
 		if (lifes > 1) {
 			lifes--;
-			Ball.y = bord.bottom - Ball.width;
-			Ball.dy *= -1;
+			Ball.dy = Ball.dx = 0;
+			Ball.y = 926;
+			Ball.x = Paddle.x + (Paddle.width - Ball.width)/2;
 		}
 		else {
 			alert('Game over');

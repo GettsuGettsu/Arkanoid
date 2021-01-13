@@ -44,6 +44,9 @@ function cycle() {
 	
 	field.addEventListener('mousemove', function (e) {
 		let px;
+		if (Ball.dx === 0 && Ball.dy === 0) {
+			Ball.x = Paddle.x + (Paddle.width - Ball.width)/2;
+		}
 		if (e.pageX - Paddle.width/2 > bord.left) {
 			if (e.pageX + Paddle.width/2 < bord.right)
 			px = e.pageX - Paddle.width/2;

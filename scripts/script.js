@@ -89,7 +89,7 @@ function cycle() {
 			Ball.x = Paddle.x + (Paddle.width - Ball.width)/2;
 		}
 		else {
-			alert('Game over');
+			alert('You lose!');
 			location.reload();
 		}
 	}
@@ -137,7 +137,6 @@ function cycle() {
 		Ball.dy = -1*Ball.v;
 		}
 	}, false);
-	
 	inpt.setAttribute('value', "lifes: " + lifes);
 }
 requestAnimationFrame(cycle);
